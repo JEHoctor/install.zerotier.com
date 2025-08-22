@@ -397,6 +397,8 @@ echo '*** Enabling and starting ZeroTier service...'
 if [ -e /usr/bin/systemctl -o -e /usr/sbin/systemctl -o -e /sbin/systemctl -o -e /bin/systemctl ]; then
 	if [[ -d /run/systemd/system ]]; then
 		$SUDO systemctl enable zerotier-one
+		# Disable errexit temporarily and handle error status explicitly.
+		set +e
 		$SUDO systemctl start zerotier-one
 		if [ "$?" != "0" ]; then
 			echo
@@ -405,6 +407,8 @@ if [ -e /usr/bin/systemctl -o -e /usr/sbin/systemctl -o -e /sbin/systemctl -o -e
 			echo
 			exit 1
 		fi
+		# Re-enable errexit.
+		set -e
 	else
 		echo
 		echo '*** Package installed but cannot start service! You may be in a Docker container'
