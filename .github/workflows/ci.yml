@@ -27,11 +27,11 @@ jobs:
       matrix:
         container:
           - "ubuntu:latest"
-          - "ubuntu:24.10"
           - "ubuntu:24.04"
           - "ubuntu:22.04"
           - "ubuntu:20.04"
           - "debian:latest"
+          - "debian:13"
           - "debian:12"
           - "debian:11"
           - "linuxmintd/mint22-amd64:latest"

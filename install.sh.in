@@ -25,8 +25,8 @@ ZT_BASE_URL_HTTP='http://download.zerotier.com/'
 ##########################################################
 
 # Debian
-MAX_SUPPORTED_DEBIAN_VERSION=12
-MAX_SUPPORTED_DEBIAN_VERSION_NAME=bookworm
+MAX_SUPPORTED_DEBIAN_VERSION=13
+MAX_SUPPORTED_DEBIAN_VERSION_NAME=trixie
 
 
 # Ubuntu
